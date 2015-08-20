@@ -1,5 +1,5 @@
 #include <stdio.h>
-void int_set(const int vc[], int no)
+void int_set(int vc[], int no)
 {
 	int i;
 	for (i = 0;  i < no; i++)
