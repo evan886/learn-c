@@ -35,9 +35,95 @@ value of *ip variable: 20
 	  
 
 
+笔记列表
+指针是一个变量，其值为另一个变量的地址，即，内存位置的直接地址。就像其他变量或常量一样，您必须在使用指针存储其他变量地址之前，对其进行声明。
+要理解指针就要先理解计算机的内存。计算机内存会被划分为按顺序编号的内存单元。每个变量都是存储在内存单元中的，称之为地址。
+
+
 
 
 
 C 指针
 
 http://www.runoob.com/cprogramming/c-pointers.html
+
+
+== C 结构体==
+
+定义结构
+为了定义结构，您必须使用 struct 语句。struct 语句定义了一个包含多个成员的新的数据类型，struct 语句的格式如下：
+struct [structure tag]
+{
+   member definition;
+   member definition;
+   ...
+   member definition;
+   } [one or more structure variables];
+
+structure tag 是可选的，每个 member definition 是标准的变量定义，比如 int i; 或者 float f; 或者其他有效的变量定义。在结构定义的末尾，最后一个分号之前，您可以指定一个或多个结构变量，这是可选的。下面是声明 Book 结构的方式：
+
+struct Books
+{
+  char title[50];
+  char author[50];
+  char subject[100];
+  int book_id;
+} book;
+
+
+访问结构成员
+
+van@evanpc:~/github/learn-c/pointer$ cat 2.c
+#include <stdio.h>
+#include <string.h>
+struct Books
+{
+  char title[50];
+    char author[50];
+      char subject[100];
+        int book_id;
+	};
+	int main()
+	{
+	  struct Books Book1;
+	    struct Books Book2;
+	      //
+	       strcpy( Book1.title,"c prigram");
+	        strcpy( Book1.author,"evan");
+		 strcpy( Book1.subject, "c program turo");
+		  Book1.book_id = 6495407;
+
+/* Book2 详述 */
+
+strcpy( Book2.title,"telecom prigram");
+ strcpy( Book2.author,"lai2");
+  strcpy( Book2.subject, "telecom  program turo");
+   Book1.book_id = 6495404;
+
+ printf( "Book 1 title : %s\n",Book1.title);
+  printf( "Book 1 author : %s\n",Book1.author);
+   printf( "Book 1 subject : %s\n",Book1.subject);
+    printf( "Book 1 book_id : %d\n",Book1.book_id); // 记得是 %d  不是%s
+     printf( "Book 2 title : %s\n",Book2.title);
+      printf( "Book 2 author : %s\n",Book2.author);
+       printf( "Book 2 subject : %s\n",Book2.subject);
+        printf( "Book 1 book_id : %d\n",Book1.book_id);
+
+ return 0;
+ };
+
+
+evan@evanpc:~/github/learn-c/pointer$ gcc 2.c -o 2
+evan@evanpc:~/github/learn-c/pointer$ ./2
+Book 1 title : c prigram
+Book 1 author : evan
+Book 1 subject : c program turo
+Book 1 book_id : 6495404
+Book 2 title : telecom prigram
+Book 2 author : lai2
+Book 2 subject : telecom  program turo
+Book 1 book_id : 6495404
+
+ === 结构作为函数参数===
+
+您可以把结构作为函数参数，传参方式与其他类型的变量或指针类似。您可以使用上面实例中的方式来访问结构变量：
