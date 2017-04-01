@@ -1,0 +1,13 @@
+Eclipse 安装(Neon 版本)
+Eclipse 最新版本 Eclipse Neon，这个首次鼓励用户使用 Eclipse Installer 来做安装，这是一种由Eclipse Oomph提供的新技术，它通过提供一个很小的安装器来使得各种工具可以按需下载和安装。
+
+第一步：访问下载页面
+下载地址为： https://www.eclipse.org/downloads/。
+
+第三步：选择安装包
+下载完成后解压下载包，可以看到 Eclipse Installer 安装器，双击它，弹出安装页面，你可以选择各种不同的语言的开发环境(包括Java、C/C++、JavaEE、PHP 等)：
+
+
+教程还不错 从这里开始看吧 有空的话  20170401
+Eclipse 窗口说明
+http://www.runoob.com/eclipse/eclipse-explore-windows.html
