@@ -1,16 +1,6 @@
 ## Process this file with automake to produce Makefile.in
 ## Created by Anjuta
 
-SUBDIRS = src po
-
-dist_doc_DATA = \
-	README \
-	COPYING \
-	AUTHORS \
-	ChangeLog \
-	INSTALL \
-	NEWS
-
 
 INTLTOOL_FILES = intltool-extract.in \
 	intltool-merge.in \

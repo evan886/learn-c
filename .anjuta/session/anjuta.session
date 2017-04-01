@@ -1,21 +1,16 @@
 [Anjuta]
-Geometry=976x827+365+93
-
-[Execution]
-Program arguments=
-Program uri=../../Debug/src/learn_c
-Run in terminal=2
-Working directories=../../.
+Geometry=976x827+867+102
 
 [File Loader]
-Files=../../src/main.c#1
+Files=../../src/main.c#1%%%../../p101.c#1
 
 [Document Manager]
 bookmarks=<?xml version="1.0" encoding="UTF-8"?>\n<bookmarks/>\n
 
-[Project Manager]
-Shortcut=learn-c//src//learn_c
-Expand=learn_c%%%learn-c
+[Execution]
+Program uri=../../Debug/src/learn_c
+Run in terminal=2
+Working directories=../../.
 
 [Build]
 Configuration list=1:Default:%%%1:Debug:Debug%%%1:Profiling:Profiling%%%1:Optimized:Optimized%%%1:MinGW32:MinGW32
