@@ -1,5 +1,7 @@
+Compiling with cc
+https://www.freebsd.org/doc/en/books/developers-handbook/tools-compiling.html
 
-
+This section deals with the gcc and clang compilers for C and C++, since they come with the FreeBSD base system. Starting with FreeBSD 10.X clang is installed as cc. 
 
 
 
@@ -280,5 +282,78 @@ pointer	NULL
 ==C 数组==
 http://www.runoob.com/cprogramming/c-arrays.html
 
+#声明数组
+在 C 中要声明一个数组，需要指定元素的类型和元素的数量，如下所示：
+type arrayName [ arraySize ];
+这叫做一维数组。arraySize 必须是一个大于零的整数常量，type 可以是任意有效的 C 数据类型。例如，要声明一个类型为 double 的包含 10 个元素的数组 balance，声明语句如下：
+double balance[10];
+现在 balance 是一个可用的数组，可以容纳 10 个类型为 double 的数字
 
+
+
+#初始化数组
+在 C 中，您可以逐个初始化数组，也可以使用一个初始化语句，如下所示：
+double balance[5] = {1000.0, 2.0, 3.4, 7.0, 50.0};#
+大括号 { } 之间的值的数目不能大于我们在数组声明时在方括号 [ ] 中指定的元素数目。
+如果您省略掉了数组的大小，数组的大小则为初始化时元素的个数。
+
+#访问数组元素
+数组元素可以通过数组名称加索引进行访问。元素的索引是放在方括号内，跟在数组名称的后边。例如：
+double salary = balance[9];
+上面的语句将把数组中第 10 个元素的值赋给 salary 变量
+
+
+#C 中数组详解
+
+
+#C 多维数组
+C 语言支持多维数组。多维数组声明的一般形式如下：
+type name[size1][size2]...[sizeN];
+例如，下面的声明创建了一个三维 5 . 10 . 4 整型数组：
+int threedim[5][10][4];
+
+初始化二维数组
+多维数组可以通过在括号内为每行指定值来进行初始化。下面是一个带有 3 行 4 列的数组。
+int a[3][4] = {  
+ {0, 1, 2, 3} ,   /*  初始化索引号为 0 的行 */
+ {4, 5, 6, 7} ,   /*  初始化索引号为 1 的行 */
+ {8, 9, 10, 11}   /*  初始化索引号为 2 的行 */
+};
+内部嵌套的括号是可选的，下面的初始化与上面是等同的：
+int a[3][4] = {0,1,2,3,4,5,6,7,8,9,10,11};
+访问二维数组元素
+二维数组中的元素是通过使用下标（即数组的行索引和列索引）来访问的。例如：
+int val = a[2][3];
+
+#C 传递数组给函数
+这个小节代码有问题 
+
+如果您想要在函数中传递一个一维数组作为参数，您必须以下面三种方式来声明函数形式参数，这三种声明方式的结果是一样的，因为每种方式都会告诉编译器将要接收一个整型指针。同样地，您也可以传递一个多维数组作为形式参数
+
+方式 1
+形式参数是一个指针（您可以在下一章中学习到有关指针的知识）：
+void myFunction(int *param)
+{
+.
+.
+.
+}
+
+方式 2
+形式参数是一个已定义大小的数组：
+void myFunction(int param[10])
+{
+.
+.
+.
+}
+
+方式 3
+形式参数是一个未定义大小的数组：
+void myFunction(int param[])
+{
+.
+.
+.
+}
 
