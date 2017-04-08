@@ -466,78 +466,21 @@ typedef int (*fun_ptr)(int,int); // 声明一个指向同样参数、返回值�
 
 ===回调函数 ===
 函数指针作为某个函数的参数
+
 函数指针变量可以作为某个函数的参数来使用的，回调函数就是一个通过函数指针调用的函数。
+
 简单讲：回调函数是由别人的函数执行时调用你实现的函数。
 
     以下是自知乎作者常溪玲的解说：
+
     你到一个商店买东西，刚好你要的东西没有货，于是你在店员那里留下了你的电话，过了几天店里有货了，店员就打了你的电话，然后你接到电话后就到店里去取了货。在这个例子里，你的电话号码就叫回调函数，你把电话留给店员就叫登记回调函数，店里后来有货了叫做触发了回调关联的事件，店员给你打电话叫做调用回调函数，你到店里去取货叫做响应回调事件。 
 
 实例
+
 实例中 populate_array 函数定义了三个参数，其中第三个参数是函数的指针，通过该函数来设置数组的值。
+
 实例中我们定义了回调函数 getNextRandomValue，它返回一个随机值，它作为一个函数指针传递给 populate_array 函数。
+
 populate_array 将调用 10 次回掉函数，并将回掉函数的返回值赋值给数组。
 
 
-==C 字符串==
-http://www.runoob.com/cprogramming/c-strings.html
-
-在 C 语言中，字符串实际上是使用 null 字符 '\0' 终止的一维字符数组。因此，一个以 null 结尾的字符串，包含了组成字符串的字符。
-
-实，您不需要把 null 字符放在字符串常量的末尾。C 编译器会在初始化数组时，自动把 '\0' 放在字符串的末尾
-
-C 中有大量操作字符串的函数：
-
-==C 结构体==
-http://www.runoob.com/cprogramming/c-structures.html
-
-C 数组允许定义可存储相同类型数据项的变量，结构是 C 编程中另一种用户自定义的可用的数据类型，它允许您存储不同类型的数据项。
-
-
-定义结构
-
-为了定义结构，您必须使用 struct 语句。struct 语句定义了一个包含多个成员的新的数据类型，struct 语句的格式如下：
-
-struct [structure tag]
-{
-   member definition;
-   member definition;
-   ...
-   member definition;
-} [one or more structure variables];  
-
-structure tag 是可选的，每个 member definition 是标准的变量定义，比如 int i; 或者 float f; 或者其他有效的变量定义。在结构定义的末尾，最后一个分号之前，您可以指定一个或多个结构变量，这是可选的。下面是声明 Book 结构的方式：
-
-struct Books
-{
-   char  title[50];
-   char  author[50];
-   char  subject[100];
-   int   book_id;
-} book;  
-
-访问结构成员
-
-为了访问结构的成员，我们使用成员访问运算符（.）。成员访问运算符是结构变量名称和我们要访问的结构成员之间的一个句号。您可以使用 struct 关键字来定义结构类型的变量
-
-C语言里面复制字符串的库函数, 函数声明包括在专门处理字符串的头文件<string.h>中:
-char * strcpy( char * dst, const char * src );
-这个函数把字符串src复制到一分配好的字符串空间dst中，复制的时候包括标志字符串结尾的空字符一起复制。操作成功，返回dst，否则返回NULL.
-
-
-结构作为函数参数
-
-
-
-
-
-===指向结构的指针===
-您可以定义指向结构的指针，方式与定义指向其他类型变量的指针相似，如下所示：
-struct Books *struct_pointer;
-
-现在，您可以在上述定义的指针变量中存储结构变量的地址。为了查找结构变量的地址，请把 & 运算符放在结构名称的前面，如下所示：
-struct_pointer = &Book1;
-
-为了使用指向该结构的指针访问结构的成员，您必须使用 -> 运算符，如下所示：
-struct_pointer->title;
-
-https://www.ibm.com/developerworks/cn/aix/library/au-sshlocks/

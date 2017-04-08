@@ -1,0 +1,3 @@
+Q: the file on the disk is more recent than the current buffer Do y ou want to reload it
+Documents --> enable files autosave
+gtksourceview editor --> create backup files
