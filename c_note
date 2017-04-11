@@ -527,9 +527,6 @@ char * strcpy( char * dst, const char * src );
 结构作为函数参数
 
 
-
-
-
 ===指向结构的指针===
 您可以定义指向结构的指针，方式与定义指向其他类型变量的指针相似，如下所示：
 struct Books *struct_pointer;
@@ -540,4 +537,207 @@ struct_pointer = &Book1;
 为了使用指向该结构的指针访问结构的成员，您必须使用 -> 运算符，如下所示：
 struct_pointer->title;
 
-https://www.ibm.com/developerworks/cn/aix/library/au-sshlocks/
+
+#不太明白呢
+===位域===
+有些信息在存储时，并不需要占用一个完整的字节，而只需占几个或一个二进制位。例如在存放一个开关量时，只有 0 和 1 两种状态，用 1 位二进位即可。为了节省存储空间，并使处理简便，C 语言又提供了一种数据结构，称为"位域"或"位段"。
+所谓"位域"是把一个字节中的二进位划分为几个不同的区域，并说明每个区域的位数。每个域有一个域名，允许在程序中按域名进行操作。这样就可以把几个不同的对象用一个字节的二进制位域来表示。
+
+典型的实例：
+    用 1 位二进位存放一个开关量时，只有 0 和 1 两种状态。
+    读取外部文件格式——可以读取非标准的文件格式。例如：9 位的整数。
+
+位域的定义和位域变量的说明
+
+位域定义与结构定义相仿，其形式为：
+struct 位域结构名 
+{
+
+ 位域列表
+
+};
+
+其中位域列表的形式为：
+类型说明符 位域名: 位域长度 
+
+例如：
+struct bs{
+    int a:8;
+    int b:2;
+    int c:6;
+}data;
+说明 data 为 bs 变量，共占两个字节。其中位域 a 占 8 位，位域 b 占 2 位，位域 c 占 6 位。
+
+==C共用体==
+
+共用体是一种特殊的数据类型，允许您在相同的内存位置存储不同的数据类型。您可以定义一个带有多成员的共用体，但是任何时候只能有一个成员带有值。共用体提供了一种使用相同的内存位置的有效方式。
+定义共用体
+
+为了定义共用体，您必须使用 union 语句，方式与定义结构类似。union 语句定义了一个新的数据类型，带有多个成员。union 语句的格式如下：
+
+union [union tag]
+{
+   member definition;
+   member definition;
+   ...
+   member definition;
+} [one or more union variables];  
+
+访问共用体成员
+
+为了访问共用体的成员，我们使用成员访问运算符（.）。成员访问运算符是共用体变量名称和我们要访问的共用体成员之间的一个句号。您可以使用 union 关键字来定义共用体类型的变量
+
+
+不太明白
+==C 位域==
+
+http://www.runoob.com/cprogramming/c-bit-fields.html
+
+
+
+
+==C typedef ==
+
+C 语言提供了 typedef 关键字，您可以使用它来为类型取一个新的名字。下面的实例为单字节数字定义了一个术语 BYTE：
+typedef unsigned char BYTE;
+在这个类型定义之后，标识符 BYTE 可作为类型 unsigned char 的缩写，例如：
+BYTE  b1, b2;
+按照惯例，定义时会大写字母，以便提醒用户类型名称是一个象征性的缩写，但您也可以使用小写字母，如下：
+typedef unsigned char byte;
+
+
+typedef vs #define
+
+#define 是 C 指令，用于为各种数据类型定义别名，与 typedef 类似，但是它们有以下几点不同：
+
+    typedef 仅限于为类型定义符号名称，#define 不仅可以为类型定义别名，也能为数值定义别名，比如您可以定义 1 为 ONE。
+    typedef 是由编译器执行解释的，#define 语句是由预编译器进行处理的。
+
+
+
+==C 输入 & 输出==
+
+http://www.runoob.com/cprogramming/c-input-output.html
+
+
+scanf() 函数用于从标准输入（键盘）读取并格式化， printf() 函数发送格式化输出到标准输出（屏幕）。
+int scanf(const char *format, ...) 函数从标准输入流 stdin 读取输入，并根据提供的 format 来浏览输入。
+
+int printf(const char *format, ...) 函数把输出写入到标准输出流 stdout ，并根据提供的格式产生输出。
+
+format 可以是一个简单的常量字符串，但是您可以分别指定 %s、%d、%c、%f 等来输出或读取字符串、整数、字符或浮点数。还有许多其他可用的格式选项，可以根据需要使用。
+
+
+sacnf()中的变量必须使用地址。  除非是 array pointer etc 
+
+http://www.oschina.net/question/234345_43611
+
+
+    所有的 C 语言程序都需要包含 main() 函数。 代码从 main() 函数开始执行。
+    printf() 用于格式化输出到屏幕。printf() 函数在 "stdio.h" 头文件中声明。
+    stdio.h 是一个头文件 (标准输入输出头文件) and #include 是一个预处理命令，用来引入头文件。 当编译器遇到 printf() 函数时，如果没有找到 stdio.h 头文件，会发生编译错误。
+    return 0; 语句用于表示退出程序。
+
+%d 格式化输出整数
+%f 格式化输出浮点型数据
+
+getchar() & putchar() 函数
+
+int getchar(void) 函数从屏幕读取下一个可用的字符，并把它返回为一个整数。这个函数在同一个时间内只会读取一个单一的字符。您可以在循环内使用这个方法，以便从屏幕上读取多个字符。
+int putchar(int c) 函数把字符输出到屏幕上，并返回相同的字符。这个函数在同一个时间内只会输出一个单一的字符。您可以在循环内使用这个方法，以便在屏幕上输出多个字符。
+
+gets() & puts() 函数
+
+char *gets(char *s) 函数从 stdin 读取一行到 s 所指向的缓冲区，直到一个终止符或 EOF。
+int puts(const char *s) 函数把字符串 s 和一个尾随的换行符写入到 stdout。
+
+
+*C 库函数 - scanf()
+http://www.runoob.com/cprogramming/c-function-scanf.html
+
+
+
+==C 文件读写==
+
+*写入文件
+int fputc( int c, FILE *fp );
+int fputs( const char *s, FILE *fp );
+
+*读取文件
+int fgetc( FILE * fp );
+char *fgets( char *buf, int n, FILE *fp );
+
+*二进制 I/O 函数
+
+==C 预处理器==
+C 预处理器不是编译器的组成部分，但是它是编译过程中一个单独的步骤。简言之，C 预处理器只不过是一个文本替换工具而已，它们会指示编译器在实际编译之前完成所需的预处理。我们将把 C 预处理器（C Preprocessor）简写为 CPP。
+
+所有的预处理器命令都是以井号（#）开头。它必须是第一个非空字符，为了增强可读性，预处理器指令应从第一列开始
+
+
+==C 头文件==
+
+头文件是扩展名为 .h 的文件，包含了 C 函数声明和宏定义，被多个源文件中引用共享。有两种类型的头文件：程序员编写的头文件和编译器自带的头文件。
+
+在程序中要使用头文件，需要使用 C 预处理指令 #include 来引用它。前面我们已经看过 stdio.h 头文件，它是编译器自带的头文件。
+
+引用头文件相当于复制头文件的内容，但是我们不会直接在源文件中复制头文件的内容，因为这么做很容易出错，特别在程序是由多个源文件组成的时候。
+
+
+
+===引用头文件的语法===
+
+使用预处理指令 #include 可以引用用户和系统头文件。它的形式有以下两种：
+
+#include <file>
+这种形式用于引用系统头文件。它在系统目录的标准列表中搜索名为 file 的文件。在编译源代码时，您可以通过 -I 选项把目录前置在该列表前。
+
+#include "file"
+这种形式用于引用用户头文件。它在包含当前文件的目录中搜索名为 file 的文件。在编译源代码时，您可以通过 -I 选项把目录前置在该列表前。
+
+
+
+===C 强制类型转换===
+
+(type_name) expression
+
+常用的算术转换不适用于赋值运算符、逻辑运算符 && 和 ||。让我们看看下面的实例来理解这个概念：
+
+
+==C 错误处理==
+没怎么看呢 
+http://www.runoob.com/cprogramming/c-error-handling.html
+
+
+==C 递归==
+
+http://www.runoob.com/cprogramming/c-recursion.html
+
+
+==C 可变参数==
+http://www.runoob.com/cprogramming/c-variable-arguments.html
+
+
+==C 命令行参数==
+http://www.runoob.com/cprogramming/c-command-line-arguments.html
+
+执行程序时，可以从命令行传值给 C 程序。这些值被称为命令行参数，它们对程序很重要，特别是当您想从外部控制程序，而不是在代码内对这些值进行硬编码时，就显得尤为重要了。
+
+命令行参数是使用 main() 函数参数来处理的，其中，argc 是指传入参数的个数，argv[] 是一个指针数组，指向传递给程序的每个参数。
+
+
+应当指出的是，argv[0] 存储程序的名称，argv[1] 是一个指向第一个命令行参数的指针，*argv[n] 是最后一个参数。如果没有提供任何参数，argc 将为 1，否则，如果传递了一个参数，argc 将被设置为 2。
+
+==C 标准库 - 参考手册==
+http://www.runoob.com/cprogramming/c-standard-library.html
+
+
+
+
+
+指向结构体的指针 ？
+ peer->v4daddr 
+
+C Programming/Why learn C?
+https://en.wikibooks.org/wiki/C_Programming/Why_learn_C%3F
+

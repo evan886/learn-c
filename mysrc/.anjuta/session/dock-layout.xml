@@ -56,7 +56,7 @@
             <item name="AnjutaGladeTree" orientation="horizontal" resize="yes" locked="no" iconified="no" closed="yes"/>
             <item name="AnjutaGladePalette" orientation="horizontal" resize="yes" locked="no" iconified="no" closed="yes"/>
             <item name="AnjutaDebuggerRegisters" orientation="horizontal" resize="yes" locked="no" iconified="no" closed="yes"/>
-            <item name="snippets_browser" orientation="vertical" resize="yes" locked="no" iconified="no" closed="no"/>
+            <item name="snippets_browser" orientation="vertical" resize="yes" locked="no" iconified="no" closed="yes"/>
           </notebook>
           <paned orientation="horizontal" resize="yes" locked="no" iconified="no" closed="no" position="500">
             <paned orientation="vertical" resize="yes" locked="no" iconified="no" closed="no" position="200">
@@ -76,13 +76,13 @@
             <notebook orientation="vertical" resize="yes" locked="no" iconified="no" closed="yes" page="-1"/>
           </paned>
         </paned>
-        <notebook orientation="vertical" resize="yes" locked="no" iconified="no" closed="no" page="5">
+        <notebook orientation="vertical" resize="yes" locked="no" iconified="no" closed="yes" page="-1">
           <item name="AnjutaDebuggerStack" orientation="horizontal" resize="yes" locked="no" iconified="no" closed="yes"/>
           <item name="AnjutaDebuggerLocals" orientation="horizontal" resize="yes" locked="no" iconified="no" closed="yes"/>
           <item name="AnjutaDebuggerWatch" orientation="vertical" resize="yes" locked="no" iconified="no" closed="yes"/>
           <item name="AnjutaDebuggerBreakpoints" orientation="vertical" resize="yes" locked="no" iconified="no" closed="yes"/>
           <item name="AnjutaMessageView" orientation="vertical" resize="yes" locked="no" iconified="no" closed="yes"/>
-          <item name="AnjutaTerminal" orientation="vertical" resize="yes" locked="no" iconified="no" closed="no"/>
+          <item name="AnjutaTerminal" orientation="vertical" resize="yes" locked="no" iconified="no" closed="yes"/>
         </notebook>
       </paned>
     </dock>
