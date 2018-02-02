@@ -4,6 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_C
+  "/home/evan/github/learn-c/cpl_2ed/chapter1/chararry.c" "/home/evan/github/learn-c/cmake-build-debug/CMakeFiles/learn_c.dir/cpl_2ed/chapter1/chararry.c.o"
   "/home/evan/github/learn-c/mysrc/1.c" "/home/evan/github/learn-c/cmake-build-debug/CMakeFiles/learn_c.dir/mysrc/1.c.o"
   "/home/evan/github/learn-c/mysrc/2.c" "/home/evan/github/learn-c/cmake-build-debug/CMakeFiles/learn_c.dir/mysrc/2.c.o"
   "/home/evan/github/learn-c/mysrc/2arr.c" "/home/evan/github/learn-c/cmake-build-debug/CMakeFiles/learn_c.dir/mysrc/2arr.c.o"

@@ -570,6 +570,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/learn_c.dir/unix/UNIXNetworkProgramming/source_code/unpv13e/unixdomain/unixstrcli01.c.o"
   "CMakeFiles/learn_c.dir/unix/UNIXNetworkProgramming/source_code/unpv13e/unixdomain/unixstrserv01.c.o"
   "CMakeFiles/learn_c.dir/unix/UNIXNetworkProgramming/source_code/unpv13e/unixdomain/unixstrserv02.c.o"
+  "CMakeFiles/learn_c.dir/cpl_2ed/chapter1/chararry.c.o"
   "learn_c.pdb"
   "learn_c"
 )

@@ -123,6 +123,33 @@ learn_c/fast:
 	$(MAKE) -f CMakeFiles/learn_c.dir/build.make CMakeFiles/learn_c.dir/build
 .PHONY : learn_c/fast
 
+cpl_2ed/chapter1/chararry.o: cpl_2ed/chapter1/chararry.c.o
+
+.PHONY : cpl_2ed/chapter1/chararry.o
+
+# target to build an object file
+cpl_2ed/chapter1/chararry.c.o:
+	$(MAKE) -f CMakeFiles/learn_c.dir/build.make CMakeFiles/learn_c.dir/cpl_2ed/chapter1/chararry.c.o
+.PHONY : cpl_2ed/chapter1/chararry.c.o
+
+cpl_2ed/chapter1/chararry.i: cpl_2ed/chapter1/chararry.c.i
+
+.PHONY : cpl_2ed/chapter1/chararry.i
+
+# target to preprocess a source file
+cpl_2ed/chapter1/chararry.c.i:
+	$(MAKE) -f CMakeFiles/learn_c.dir/build.make CMakeFiles/learn_c.dir/cpl_2ed/chapter1/chararry.c.i
+.PHONY : cpl_2ed/chapter1/chararry.c.i
+
+cpl_2ed/chapter1/chararry.s: cpl_2ed/chapter1/chararry.c.s
+
+.PHONY : cpl_2ed/chapter1/chararry.s
+
+# target to generate assembly for a file
+cpl_2ed/chapter1/chararry.c.s:
+	$(MAKE) -f CMakeFiles/learn_c.dir/build.make CMakeFiles/learn_c.dir/cpl_2ed/chapter1/chararry.c.s
+.PHONY : cpl_2ed/chapter1/chararry.c.s
+
 mysrc/1.o: mysrc/1.c.o
 
 .PHONY : mysrc/1.o
@@ -15549,6 +15576,9 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... learn_c"
+	@echo "... cpl_2ed/chapter1/chararry.o"
+	@echo "... cpl_2ed/chapter1/chararry.i"
+	@echo "... cpl_2ed/chapter1/chararry.s"
 	@echo "... mysrc/1.o"
 	@echo "... mysrc/1.i"
 	@echo "... mysrc/1.s"

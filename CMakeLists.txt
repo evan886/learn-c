@@ -615,6 +615,6 @@ set(SOURCE_FILES
         unix/UNIXNetworkProgramming/source_code/unpv13e/unixdomain/unixstrcli01.c
         unix/UNIXNetworkProgramming/source_code/unpv13e/unixdomain/unixstrserv01.c
         unix/UNIXNetworkProgramming/source_code/unpv13e/unixdomain/unixstrserv02.c
-        limits.h)
+        limits.h cpl_2ed/chapter1/chararry.c)
 
 add_executable(learn_c ${SOURCE_FILES})

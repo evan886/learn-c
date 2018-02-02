@@ -84,6 +84,9 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="/home/evan/github/learn-c/cpl_2ed/chapter1/chararry.c">
+			<Option target="learn_c"/>
+		</Unit>
 		<Unit filename="/home/evan/github/learn-c/limits.h">
 			<Option target="learn_c"/>
 		</Unit>
