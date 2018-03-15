@@ -22,3 +22,7 @@ shell>man 3  printf
        int printf(const char *format, ...);
 3.4 全局变量　局部变量和作用域
 
+p37 的题目
+
+chapter4  分支语句
+-----------------
