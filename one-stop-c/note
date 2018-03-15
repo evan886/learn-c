@@ -17,4 +17,8 @@ chapter3 简单函数
 ３.2 自定义函数
 3.3 形参和实参
 
+shell>man 3  printf
+       #include <stdio.h>
+       int printf(const char *format, ...);
+3.4 全局变量　局部变量和作用域
 
