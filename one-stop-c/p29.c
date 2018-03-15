@@ -8,6 +8,8 @@ int main(void)
 {
         printf("first line.\n");
         newline();
+        newline();
+        
         printf("second line. \n");
         return 0;
         
