@@ -1,11 +1,12 @@
 #include <stdio.h>
-/*
- * comment1
-*/
 int main(void)
 {
-        printf("hello, \n");
-
+        //printf("hello, \n");
+        int hour,minute;
+        hour = 11;
+        minute = 59;
+        printf("current time is  %d and %d hours\n",hour,minute/60);
+        
         return 0;
         
 }
