@@ -1,5 +1,10 @@
 uhttps://www.jianshu.com/p/3ad26b78556c 基本数据类型
 
+Linux C一站式编程习题答案
+
+http://www.cnblogs.com/litifeng/articles/5638574.html
+http://yonghaowu.github.io/2016/06/21/LinuxC/
+http://blog.csdn.net/jnu_simba/article/details/8809032
 
 gcc -Wall hello.c -o  hello
 
@@ -22,3 +27,21 @@ shell>man 3  printf
        int printf(const char *format, ...);
 3.4 全局变量　局部变量和作用域
 
+p37 的题目
+
+chapter4  分支语句
+-----------------
+
+4.1 if
+4.2 if / else
+
+
+
+
+
+
+Linux C一站式编程习题答案
+
+http://www.cnblogs.com/litifeng/articles/5638574.html
+http://yonghaowu.github.io/2016/06/21/LinuxC/
+http://blog.csdn.net/jnu_simba/article/details/8809032
