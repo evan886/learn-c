@@ -34,10 +34,30 @@ chapter4  分支语句
 
 4.1 if
 4.2 if / else
+4.3 布尔代数
+4.4 switch
+switch ()
+{
+case  :
+case :
+default:
+}
 
 
 
+chapter5  深入理解函数
+----------------
+5.1 return 语句
+一般来说　Ｃ语言的传参规则是 call by value 按值传递
 
+５.2 增量式开发
+eg:
+  编写一个程序求圆的面积，圆的半径以两个端点的坐标(x1,y1) 和(x2,y2) 给出. 首先　分析和分解问题　，把大问题分解成小问题，再对小问题分别求解
+
+
+
+C 语言经典100例
+http://www.runoob.com/cprogramming/c-100-examples.html
 
 
 Linux C一站式编程习题答案
