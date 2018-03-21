@@ -16,6 +16,9 @@ chapter2
 2.5表达式
 2.6字符类型与字符编码
 
+http://c.biancheng.net/cpp/html/437.html c语言基本数据类型short、int、long、char、float、double
+
+
 chapter3 简单函数
 -----------------
 3.1数学函数
@@ -60,7 +63,7 @@ eg:
 chapter6  循环语句
 ----------------
 6.1 while 语句
-
+6.2 do/ while 
 
 
 
