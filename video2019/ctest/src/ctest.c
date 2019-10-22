@@ -22,14 +22,16 @@ int main()
   s = PI * r * r;
   printf("\n面积=%f\n",s);
 }
-*/#include <stdio.h>
+*/
+
+/*
 #include <stdio.h>
 #include <math.h>
 #define PI 3.14
 float area(float r)
 {
   float s;
-  s = PI *pow(r,2);
+  s = PI * pow(r,2);
   return s;
 }
 int main()
@@ -40,4 +42,12 @@ int main()
   s = area(r);
   printf("\n面积=%f\n",s);
   return 0;
+}
+*/
+
+#include <stdio.h>
+
+int main()
+{
+  printf("sdd");
 }

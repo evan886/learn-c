@@ -1,4 +1,0 @@
-/home/evan/apps/clion/bin/cmake/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" /home/evan/github/learn-c
--- Configuring done
--- Generating done
--- Build files have been written to: /home/evan/github/learn-c/cmake-build-debug
