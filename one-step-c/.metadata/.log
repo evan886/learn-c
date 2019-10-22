@@ -1,0 +1,24 @@
+!SESSION 2019-10-22 14:45:27.134 -----------------------------------------------
+eclipse.buildId=4.11.0.v20190321-0023
+java.version=1.8.0_212
+java.vendor=Oracle Corporation
+BootLoader constants: OS=freebsd, ARCH=amd64, WS=gtk, NL=zh_CN
+Command-line arguments:  -os freebsd -ws gtk -arch amd64
+
+!ENTRY org.eclipse.launchbar.core 2 0 2019-10-22 14:46:07.019
+!MESSAGE Enablement expression is missing for config provider for org.eclipse.cdt.qt.core.launchDescriptorType
+
+!ENTRY org.eclipse.launchbar.core 2 0 2019-10-22 14:46:07.020
+!MESSAGE Enablement expression is missing for config provider for org.eclipse.cdt.arduino.core.descriptorType
+!SESSION 2019-10-22 15:27:20.264 -----------------------------------------------
+eclipse.buildId=4.11.0.v20190321-0023
+java.version=1.8.0_212
+java.vendor=Oracle Corporation
+BootLoader constants: OS=freebsd, ARCH=amd64, WS=gtk, NL=zh_CN
+Command-line arguments:  -os freebsd -ws gtk -arch amd64
+
+!ENTRY org.eclipse.launchbar.core 2 0 2019-10-22 15:27:36.156
+!MESSAGE Enablement expression is missing for config provider for org.eclipse.cdt.qt.core.launchDescriptorType
+
+!ENTRY org.eclipse.launchbar.core 2 0 2019-10-22 15:27:36.157
+!MESSAGE Enablement expression is missing for config provider for org.eclipse.cdt.arduino.core.descriptorType

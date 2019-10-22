@@ -1,18 +1,16 @@
 [Anjuta]
-Geometry=958x504+0+23
+Geometry=960x1020+0+30
 
 [File Loader]
-Files=../../cpl_2ed/chapter2/fahr.c#10
+Files=../../one-step-c/struct/str.vis.c#9
 
 [Document Manager]
 bookmarks=<?xml version="1.0" encoding="UTF-8"?>\n<bookmarks/>\n
 
 [Execution]
+Program arguments=
 Run in terminal=2
 Working directories=../../.
-
-[Project Manager]
-Expand=learn-c%%%learn-c//cpl_2ed
 
 [Debugger]
 Stop at beginning=2

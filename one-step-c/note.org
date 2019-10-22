@@ -8,7 +8,7 @@ http://blog.csdn.net/jnu_simba/article/details/8809032
 
 gcc -Wall hello.c -o  hello
 
-chapter2
+* chapter2
 -------------------
 2.2 常量
 2.3 变量　
@@ -19,7 +19,7 @@ chapter2
 http://c.biancheng.net/cpp/html/437.html c语言基本数据类型short、int、long、char、float、double
 
 
-chapter3 简单函数
+* chapter3 简单函数
 -----------------
 3.1数学函数
 ３.2 自定义函数
@@ -32,7 +32,7 @@ shell>man 3  printf
 
 p37 的题目
 
-chapter4  分支语句
+*   chapter4  分支语句
 -----------------
 
 4.1 if
@@ -48,7 +48,7 @@ default:
 
 
 
-chapter5  深入理解函数
+* chapter5深入理解函数
 ----------------
 5.1 return 语句
 一般来说　Ｃ语言的传参规则是 call by value 按值传递
@@ -60,7 +60,7 @@ eg:
 5.3 递归 recursive
 
 
-chapter6  循环语句
+* chapter6循环语句
 ----------------
 6.1 while 语句
 6.2 do/ while 
@@ -73,9 +73,42 @@ chapter6  循环语句
 2018年 04月 11日 星期三 16:24:30 CST
 >>>>>>> 310c0528cd56a461c428c31f203f403060470a32:one-step-c/note
 
-C语言结构体（Struct）
+* chapter7 Struct）
 http://c.biancheng.net/cpp/html/88.html
 
+
+** 定义结构
+
+为了定义结构，您必须使用 struct 语句。struct 语句定义了一个包含多个成员的新的数据类型，struct 语句的格式如下：
+struct tag { 
+    member-list
+    member-list 
+    member-list  
+    ...
+} variable-list ;
+
+tag 是结构体标签。
+
+member-list 是标准的变量定义，比如 int i; 或者 float f，或者其他有效的变量定义。
+
+variable-list 结构变量，定义在结构的末尾，最后一个分号之前，您可以指定一个或多个结构变量。下面是声明 Book 结构的方式：
+struct Books
+{
+   char  title[50];
+   char  author[50];
+   char  subject[100];
+   int   book_id;
+} book;
+
+
+
+
+2019年10月22日 星期二
+
+https://www.runoob.com/cprogramming/c-structures.html
+
+
+* chapter 8 
 
 C 语言经典100例
 http://www.runoob.com/cprogramming/c-100-examples.html
