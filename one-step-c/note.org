@@ -108,6 +108,12 @@ struct Books
 https://www.runoob.com/cprogramming/c-structures.html
 
 
+看了 https://www.runoob.com/cprogramming/c-structures.html
+
+位域不太明白
+
+
+
 * chapter 8 
 
 C 语言经典100例
