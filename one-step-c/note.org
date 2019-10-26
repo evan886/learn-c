@@ -65,17 +65,20 @@ eg:
 6.1 while 语句
 6.2 do/ while 
 6.3 for
-<<<<<<< HEAD:one-stop-c/note
+
 6.4 break and continue
 6.5 嵌套循环
 =======
 
 2018年 04月 11日 星期三 16:24:30 CST
->>>>>>> 310c0528cd56a461c428c31f203f403060470a32:one-step-c/note
 
-* chapter7 Struct）
+
+
+
+* chapter7 Struct
 http://c.biancheng.net/cpp/html/88.html
 
+ 201910
 
 ** 定义结构
 
@@ -115,6 +118,9 @@ https://www.runoob.com/cprogramming/c-structures.html
 
 
 * chapter 8 
+**8.3 数组应用实例：直方图
+
+
 
 C 语言经典100例
 http://www.runoob.com/cprogramming/c-100-examples.html
