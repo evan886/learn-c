@@ -1,4 +1,4 @@
-uhttps://www.jianshu.com/p/3ad26b78556c 基本数据类型
+https://www.jianshu.com/p/3ad26b78556c 基本数据类型
 
 Linux C一站式编程习题答案
 
@@ -10,7 +10,7 @@ gcc -Wall hello.c -o  hello
 
 * chapter2
 -------------------
-2.2 常量
+2.2 常量  字符常量（Character Constant）、数字常量和枚举常量
 2.3 变量　
 2.4赋值
 2.5表达式
@@ -22,7 +22,7 @@ http://c.biancheng.net/cpp/html/437.html c语言基本数据类型short、int、
 * chapter3 简单函数
 -----------------
 3.1数学函数
-３.2 自定义函数
+３.2 自定义函数 2019年10月28日
 3.3 形参和实参
 
 shell>man 3  printf
