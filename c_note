@@ -214,6 +214,10 @@ do...while 循环与 while 循环类似，但是 do...while 循环会确保至�
 
 break 语句	终止循环或 switch 语句，程序流将继续执行紧接着循环或 switch 的下一条语句。
 continue 语句	告诉一个循环体立刻停止本次循环迭代，重新开始下次循环迭代。
+
+continue语句也用来终止当前循环，和break语句不同的是，continue语句终止当前循环后又回到循环体的开头准备再次执行循环体。对于while和do/while，continue之后测试控制表达式，如果值为真则继续执行下一次循环；对于for循环，continue之后首先计算控制表达式3，然后测试控制表达式2，如果值为真则继续执行下一次循环
+
+
 goto 语句	将控制转移到被标记的语句。但是不建议在程序中使用 goto 语句。
 
 
@@ -283,6 +287,10 @@ pointer	NULL
 
 ==C 数组==
 http://www.runoob.com/cprogramming/c-arrays.html
+
+
+注意，在定义数组int count[4];时，方括号（Bracket）中的数字4表示数组的长度，而在访问数组时，方括号中的数字表示访问数组的第几个元素。和我们平常数数不同，数组元素是从“第0个”开始数的，大多数编程语言都是这么规定的，所以计算机术语中有Zeroth这个词
+
 
 #声明数组
 在 C 中要声明一个数组，需要指定元素的类型和元素的数量，如下所示：
@@ -488,6 +496,18 @@ http://www.runoob.com/cprogramming/c-strings.html
 实，您不需要把 null 字符放在字符串常量的末尾。C 编译器会在初始化数组时，自动把 '\0' 放在字符串的末尾
 
 C 中有大量操作字符串的函数：
+
+
+补充一点，printf函数的格式化字符串中可以用%s表示字符串的占位符。在学字符数组以前，我们用%s没什么意义，因为
+
+printf("string: %s\n", "Hello");
+还不如写成
+
+printf("string: Hello\n");
+但现在字符串可以保存在一个数组里面，用%s来打印就很有必要了：
+
+printf("string: %s\n", str);
+printf会从数组str的开头一直打印到'\0'字符为止（'\0'本身不打印）。这其实是一个危险的信号：如果数组str中没有'\0'，那么printf就会打印出界，后果和前面
 
 ==C 结构体==
 http://www.runoob.com/cprogramming/c-structures.html

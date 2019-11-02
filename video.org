@@ -34,10 +34,8 @@ https://v.qq.com/x/page/j0827a2vkmh.html
 13  func 返回值
 https://v.youku.com/v_show/id_XMzIwODk5NjEwNA==.html
 
-书看到 while  
-http://docs.linuxtone.org/ebooks/C&CPP/c/ch06s01.html
-
-http://docs.linuxtone.org/ebooks/C&CPP/c/ch05s02.html
+书看到 第 6 章 嵌套循环 
+http://docs.linuxtone.org/ebooks/C&CPP/c/ch06s05.html
 
 
 17 

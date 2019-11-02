@@ -3,7 +3,6 @@
 #define N 20
 
 int a[N];
-
 void gen_random(int upper_bound)
 {
 	int i;
@@ -25,7 +24,6 @@ int main(void)
 	print_random();
 	return 0;
 }
-
 
 /*
 3 7 8 5 2 3 7 8 8 0 9 2 6 3 3 8 6 7 9 3

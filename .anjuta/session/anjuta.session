@@ -1,16 +1,19 @@
 [Anjuta]
-Geometry=960x1020+0+30
+Geometry=1920x1020+0+30
+
+[Execution]
+Program uri=../../../../../../usr/local/bin/gcc%%%../../gcc
+Run in terminal=2
+Working directories=../../.
 
 [File Loader]
-Files=../../one-step-c/struct/str.vis.c#9
+Files=../../video.org#1%%%../../c_note#510%%%../../one-step-c/readme#27%%%../../one-step-c/chapter8%20array/8.2.c#10
 
 [Document Manager]
 bookmarks=<?xml version="1.0" encoding="UTF-8"?>\n<bookmarks/>\n
 
-[Execution]
-Program arguments=
-Run in terminal=2
-Working directories=../../.
+[Project Manager]
+Expand=learn-c%%%learn-c//one-step-c
 
 [Debugger]
 Stop at beginning=2
