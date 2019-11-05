@@ -1,0 +1,6 @@
+#include<stdio.h>
+ char days[8][10] = {
+ 5               "", "Monday", "Tuesday",
+ 6                             "Wednesday", "Thursday", "Friday",
+ 7                             "Saturday", "Sunday"
+ 8    };
