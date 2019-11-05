@@ -1,0 +1,25 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+int main(void)
+{
+	char gesture[3][10] = { "scissor", "stone", "cloth" };
+	int man, computer, result, ret;
+
+        int i,j;
+        
+        for (i =0;i<3;i++)
+        {
+                for (j =0; j<10; j++)
+                {
+                      //  printf("gesture[%d][%d] = %c\n",gesture[i][j]);
+                        printf(" %c",gesture[i][j]);
+                        //                printf(" %c\n",g[i][j]);
+                        
+                }
+
+        }
+        return 0;
+
+}
+
