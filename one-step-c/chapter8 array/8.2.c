@@ -9,3 +9,9 @@ void print_day (int day)
 	if (day < 1 || day >7)
 		     printf("Illegal day number!\n");
 }
+int main(void)
+{
+        print_day(2);
+        return 0;
+        
+}
