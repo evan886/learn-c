@@ -1,3 +1,10 @@
+
+一站式学习c编程 主要笔记
+2019年11月 6日
+
+
+
+
 https://www.jianshu.com/p/3ad26b78556c 基本数据类型
 
 Linux C一站式编程习题答案
@@ -122,6 +129,62 @@ https://www.runoob.com/cprogramming/c-structures.html
 
 * chapter 8 
 **8.3 数组应用实例：直方图
+
+** 多维
+
+/*                                                                                                                                                                                          
+20答案是 Tuesday  因为列数定了是10                                                                                                                                                            
+21days[2] === days[2][10]                                                                                                                                                                     
+22                                                                                                                                                                                            
+23解说                                                                                                                                                                                        
+24days[2][0]=T                                                                                                                                                                                
+25days[2][1]=u                                                                                                                                                                                
+26days[2][2]=e                                                                                                                                                                                
+27days[2][3]=s                                                                                                                                                                                
+28days[2][4]=d                                                                                                                                                                                
+29days[2][5]=a                                                                                                                                                                                
+30days[2][6]=y                                                                                                                                                                                
+31days[2][7]=                                                                                                                                                                                 
+32days[2][8]=                                                                                                                                                                                 
+33days[2][9]=                                                                                                                                                                                 
+34                                                                                                                                                                                            
+35                 
+
+* chapter 9 编码风格
+2019年11月1日
+
+ndent工具
+indent工具可以把代码格式化成某种风格，例如把例 9.1 “缺少缩进和空白的代码”格式化成内核风格：
+
+$ indent -kr -i8 main.c
+
+http://docs.linuxtone.org/ebooks/C&CPP/c/ch09s05.html
+
+
+* chapter 10 gdb 
+
+2019年11月 6日
+** 单步执行和跟踪函数调用  有空再加深一下 
+http://docs.linuxtone.org/ebooks/C&CPP/c/ch10s01.html
+
+这表示停在main函数中变量定义之后的第一条语句处等待我们发命令，gdb列出这条语句表示它还没执行，并且马上要执行。我们可以用next命令（简写为n）控制这些语句一条一条地执行：
+
+(gdb) n
+15		result[1] = add_range(1, 100);
+(gdb) （直接回车）
+16		printf("result[0]=%d\nresult[1]=%d\n", result[0], result[1]);
+(gdb) （直接回车）
+result[0]=55
+result[1]=5105
+17		return 0;
+用n命令依次执行两行赋值语句和一行打印语句，在执行打印语句时结果立刻打出来了，然后停在return语句之前等待我们发命令。虽然我们完全控制了程序的执行，但仍然看不出哪里错了，因为错误不在main函数而在add_range函数，现在用start命令重新来过，这次用step命令（简写为s）进入函数中去执行：
+
+** 断点
+
+* chapter 11  排序与查找
+
+
+
 
 
 
