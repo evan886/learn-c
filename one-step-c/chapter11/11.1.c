@@ -14,7 +14,7 @@ void insertion_sort(void)
                 // key  与已排序元素从大到小比较，寻找key应插入的元素
 		while (i >= 0 && a[i] > key) {
 			a[i+1] = a[i];
-			--i; //这个是干啥的 和下面的刚好变成 [i+1]==[0]
+			--i; //跳出while 
 		}
 		a[i+1] = key;
 	}
