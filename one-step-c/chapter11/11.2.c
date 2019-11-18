@@ -58,6 +58,193 @@ int main(void)
 
 /* 
  gcc -g -Wall main.c  -o main
+warning: Source file is more recent than executable.
+55		sort(0, LEN-1);
+(gdb) s
+sort (start=0, end=7) at 11.2.c:40
+40		if (start < end) {
+(gdb) disp start 
+1: start = 0
+(gdb) disp end 
+2: end = 7
+(gdb) disp mid
+3: mid = 8
+(gdb) s
+41			mid = (start + end) / 2;
+1: start = 0
+2: end = 7
+3: mid = 8
+(gdb) s
+42			printf("sort (%d-%d, %d-%d) %d %d %d %d %d %d %d %d\n", 
+1: start = 0
+2: end = 7
+3: mid = 3
+(gdb) s
+sort (0-3, 4-7) 5 2 4 7 1 3 2 6
+45			sort(start, mid);
+1: start = 0
+2: end = 7
+3: mid = 3
+(gdb) s
+sort (start=0, end=3) at 11.2.c:40
+40		if (start < end) {
+1: start = 0
+2: end = 3
+3: mid = 0
+(gdb) s
+41			mid = (start + end) / 2;
+1: start = 0
+2: end = 3
+3: mid = 0
+(gdb) s
+42			printf("sort (%d-%d, %d-%d) %d %d %d %d %d %d %d %d\n", 
+1: start = 0
+2: end = 3
+3: mid = 1
+(gdb) s
+sort (0-1, 2-3) 5 2 4 7 1 3 2 6
+45			sort(start, mid);
+1: start = 0
+2: end = 3
+3: mid = 1
+(gdb) s
+sort (start=0, end=1) at 11.2.c:40
+40		if (start < end) {
+1: start = 0
+2: end = 1
+3: mid = 0
+(gdb) s
+41			mid = (start + end) / 2;
+1: start = 0
+2: end = 1
+3: mid = 0
+(gdb) s
+42			printf("sort (%d-%d, %d-%d) %d %d %d %d %d %d %d %d\n", 
+1: start = 0
+2: end = 1
+3: mid = 0
+(gdb) s
+sort (0-0, 1-1) 5 2 4 7 1 3 2 6
+45			sort(start, mid);
+1: start = 0
+2: end = 1
+3: mid = 0
+(gdb) s
+sort (start=0, end=0) at 11.2.c:40
+40		if (start < end) {
+1: start = 0
+2: end = 0
+3: mid = 0
+(gdb) s
+52	}
+1: start = 0
+2: end = 0
+3: mid = 0
+(gdb) s
+sort (start=0, end=1) at 11.2.c:46
+46			sort(mid + 1, end); // sort (start=0, end=1) at 11.2.c:46  mid  end  start 0,0,0 时不成立，又回来上次的  mid0 end 1, start 0 
+1: start = 0
+2: end = 1
+3: mid = 0
+(gdb) s
+sort (start=1, end=1) at 11.2.c:40
+40		if (start < end) {
+1: start = 1
+2: end = 1
+3: mid = 0
+(gdb) s
+52	}
+1: start = 1
+2: end = 1
+3: mid = 0
+(gdb) s
+sort (start=0, end=1) at 11.2.c:47
+47			merge(start, mid, end);
+1: start = 0
+2: end = 1
+3: mid = 0
+(gdb) s
+merge (start=0, mid=0, end=1) at 11.2.c:5
+5	{
+(gdb) s
+6		int n1 = mid - start + 1;
+(gdb) s
+7		int n2 = end - mid;
+(gdb) s
+8		int left[n1], right[n2];
+(gdb) s
+10		for (i = 0; i < n1; i++) /* left holds a[start..mid] */
+(gdb) s
+11			left[i] = a[start+i];
+(gdb) s
+10		for (i = 0; i < n1; i++) /* left holds a[start..mid] */
+(gdb) s
+12		for (j = 0; j < n2; ++j) /* right holds a[mid+1..end] */
+(gdb) s
+13			right[j] = a[mid+1+j];
+(gdb) s
+12		for (j = 0; j < n2; ++j) /* right holds a[mid+1..end] */
+(gdb) s
+13			right[j] = a[mid+1+j];
+(gdb) s
+12		for (j = 0; j < n2; ++j) /* right holds a[mid+1..end] */
+(gdb) s
+15		i = j = 0;
+(gdb) s
+16		for (k = start; i < n1 && j < n2; ++k) {
+(gdb) s
+17			if (left[i] < right[j]) {
+(gdb) s
+21				a[k] = right[j];
+(gdb) s
+22				++j;
+(gdb) s
+16		for (k = start; i < n1 && j < n2; ++k) {
+(gdb) s
+26		if (i < n1) 		/* left[] is not exhausted */
+(gdb) s
+27			for (; i < n1; i++) {
+(gdb) s
+28				a[k] = left[i];
+(gdb) s
+29				++k;
+(gdb) s
+27			for (; i < n1; i++) {
+(gdb) s
+31		if (j < n2)		/* right[] is not exhausted */
+(gdb) s
+36	}
+(gdb) s
+sort (start=0, end=1) at 11.2.c:48
+48			printf("merge (%d-%d, %d-%d) to %d %d %d %d %d %d %d %d\n", 
+1: start = 0
+2: end = 1
+3: mid = 0
+(gdb) s
+merge (0-0, 1-1) to 2 5 4 7 1 3 2 6
+52	}
+1: start = 0
+2: end = 1
+3: mid = 0
+(gdb) s
+sort (start=0, end=3) at 11.2.c:46
+46			sort(mid + 1, end); // sort (start=0, end=1) at 11.2.c:46  mid  end  start 0,0,0 时不成立，又回来上次的  mid0 end 1, start 0 
+1: start = 0
+2: end = 3
+3: mid = 1
+(gdb) s
+sort (start=2, end=3) at 11.2.c:40
+40		if (start < end) {
+1: start = 2
+2: end = 3
+3: mid = 0
+
+
+
+
+
+
+ * 
 
  Temporary breakpoint 1, main () at main.c:55
 55		sort(0, LEN-1);
