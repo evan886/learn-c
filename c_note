@@ -4,6 +4,8 @@ https://www.freebsd.org/doc/en/books/developers-handbook/tools-compiling.html
 This section deals with the gcc and clang compilers for C and C++, since they come with the FreeBSD base system. Starting with FreeBSD 10.X clang is installed as cc. 
 
 
+这个是当时在 dkm 看runoob教程的笔记 
+2020年 11月 20日 星期五  update
 
 ==C 数据类型==
 http://www.runoob.com/cprogramming/c-data-types.html
@@ -680,6 +682,7 @@ http://www.runoob.com/cprogramming/c-function-scanf.html
 
 
 ==C 文件读写==
+2020年 11月 20日 
 
 *写入文件
 int fputc( int c, FILE *fp );

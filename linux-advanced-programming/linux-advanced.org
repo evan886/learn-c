@@ -1,0 +1,31 @@
+* chapter 2 
+**  base tools 
+***  tar 
+
+-c, --create               创建一个新归档
+
+-x, --extract, --get       从归档中解出文件
+
+eg 
+tar  -cvf  file.tar  dir/file  
+
+
+Examples:
+  tar -cf archive.tar foo bar  # Create archive.tar from files foo and bar.
+  tar -tvf archive.tar         # List all files in archive.tar verbosely.
+  tar -xf archive.tar          # Extract all files from archive.tar.
+
+***  常用命令
+**** expand 
+Convert tabs in each FILE to spaces, writing to standard output.
+制表格转为空格
+**** grep 
+grep -rn  sth  file 
+
+ atime 被访问 
+ ctime 状态被修改过
+ mtime内容被修过 
+-exec   {} 为所找到的文件; \\ 是一定要这样结束
+-ok  和上不一样会询问  
+****  awk 
+
