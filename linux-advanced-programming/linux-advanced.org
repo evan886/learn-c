@@ -29,3 +29,9 @@ grep -rn  sth  file
 -ok  和上不一样会询问  
 ****  awk 
 
+awk '{print $1}' filename 
+
+
+awk 读取输入的内容时,整条记录被分配给变量$0, 各字段为 $1 $2 
+****  sed 
+
