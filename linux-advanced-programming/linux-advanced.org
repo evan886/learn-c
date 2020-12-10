@@ -34,4 +34,15 @@ awk '{print $1}' filename
 
 awk 读取输入的内容时,整条记录被分配给变量$0, 各字段为 $1 $2 
 ****  sed 
+ -i[扩展名], --in-place[=扩展名]
+                 直接修改文件（如果指定扩展名则备份文件）
+
+
+eg 
+
+sed '2d'  filename 
+sed '2,$d' filename  
+sed '/test/d' filename  删除包有test的行 
+sed 's/test/test2/g'  filename
+
 
