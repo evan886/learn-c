@@ -94,6 +94,26 @@ p32 剩下几个没笔记 呢 有空再看要不要了
 找出什么打印 最多人访问的那个命令出来看下 
 
 
+查看日志中访问次数最多的前10个IP
+
+#cat access_log |cut -d ' ' -f 1 |sort |uniq -c | sort -nr | awk '{print $0 }' | head -n 10 |less
+****  其它有用命令
+
+nl 为输入的每行添加 行号
+
+wc , head , tail , tac cat  
+paster  ,od 
+**** 重定向
+标准输入  0 默认有键盘 
+****  常用键盘组合 
+ctrl+c 
+^\ ctrl+\
+
+ctrl +z 挂起 
+
+stty -a 
+
+
 
 
 
