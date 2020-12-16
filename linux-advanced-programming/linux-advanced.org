@@ -45,4 +45,57 @@ sed '2,$d' filename
 sed '/test/d' filename  删除包有test的行 
 sed 's/test/test2/g'  filename
 
+只打印发生替换的行
+ sed  -n 's/i1/love/p' e.txt 
+love111
+
+所有192.168.0.1 开头的行都被替换成它自己加localhost  192.168.0.1localhost 
+sed  's/^192.168.0.1/&localhost/' filename 
+
+
+evan@myxps:~/tmp$ cat e.txt 
+i1111
+2222
+
+
+
+
+
+3333
+evan@myxps:~/tmp$ sed -i  -n 's/^i1/&love/p' e.txt 
+evan@myxps:~/tmp$ cat e.txt 
+i1love111
+
+sed -n 's/\(love\)able/\1rs/p' filename love  被标记为1 所以loveable会被替换成lovers, 替换的行会被打印 
+
+
+sed 's#1#2#g' filename 紧跟s命令的为新的分隔符 所以 有如默认的/ 或者说我常常用的! 而不用去转义 
+
+
+sed -n '/test/,check/p' filename   有模板test and check 确定的范围内的行都被打印 
+
+sed -n '5,/^test/p' filename  打印从第5行开始到第一个以test开头的行之间的所有行 
+
+sed -e '1,5d' -e 's/test/check/'  -e 允许同一行里 执行多个命令 如这里 前面是 删除ln1-ln5  后面是替换拉 
+
+
+  expression 比-e 更加好 可以给sed 表达式赋值 
+evan@myxps:~/tmp$ cat e.txt 
+i1love111
+test
+evan@myxps:~/tmp$ sed --expression='s/test/check/'  --expression='/love/d' e.txt 
+check
+
+解说  有lvoe那行全删除了  要生效直接加 -i 
+
+p32 剩下几个没笔记 呢 有空再看要不要了 
+****  sort 
+
+找出什么打印 最多人访问的那个命令出来看下 
+
+
+
+
+
+
 
